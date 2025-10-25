@@ -26,6 +26,20 @@ Supports user registration, login with JWT cookies, and product listing pages.
 
 ---
 
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+  A[Client] -->|HTTP Requests| B[Express app.js]
+  B --> C[Routes: /, /users, /owners, /products]
+  C --> D[Controllers: authController]
+  C --> E[Views: EJS templates]
+  B --> F[Middleware: cookie-parser, express-session, flash, isLoggedIn]
+  D --> G[JWT utils: generateToken]
+  B --> H[(MongoDB via Mongoose)]
+  H --> I[Models: User, Owner, Product]
+```
+
 ## Project Structure
 
 ```
