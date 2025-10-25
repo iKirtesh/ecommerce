@@ -1,6 +1,3 @@
-Here’s a well-structured `README.md` for your **E-commerce Node.js App** project:
-
-
 # E-commerce Node.js App
 
 A simple e-commerce starter built with **Node.js**, **Express**, **EJS**, and **MongoDB**.  
